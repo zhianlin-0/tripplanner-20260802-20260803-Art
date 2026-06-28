@@ -6,7 +6,6 @@
     <title>Zhian's Trip-0802 Yilan Art 🎨</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👸🏻🎨</text></svg>">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -70,65 +69,50 @@
 </head>
 <body class="text-sand-800 min-h-screen flex flex-col antialiased pb-20 md:pb-6">
 
-    <!-- HERO HEADER (宜蘭山水與青花磁藍交織的天際線) -->
     <header class="relative overflow-hidden bg-gradient-to-b from-ocean-100 via-coral-50 to-sand-50 pt-10 pb-6 px-4 text-center border-b border-sand-200/50 shadow-sm">
         
-        <!-- ⛰️ 宜蘭精神象徵 ➔ 龜山島與海浪圖騰 -->
-        <svg class="absolute right-4 bottom-0 opacity-25 pointer-events-none hidden md:block" style="width: 140px; height: 120px;" viewBox="0 0 100 100" fill="none" stroke="#1d4ed8" stroke-width="1.5">
-            <!-- Guishan Island profile -->
+        <svg class="absolute right-2 bottom-0 opacity-15 md:opacity-25 pointer-events-none w-[90px] h-[80px] md:w-[140px] md:h-[120px]" viewBox="0 0 100 100" fill="none" stroke="#1d4ed8" stroke-width="1.5">
             <path d="M5 80 Q 25 35 45 60 Q 60 45 80 80" stroke-linecap="round" />
-            <!-- Little turtle tail/head -->
             <path d="M80 80 Q 85 75 90 80" stroke-linecap="round" />
-            <!-- Sea waves -->
             <path d="M0 85 Q 15 82 30 85 T 60 85 T 90 85 T 100 85" stroke-linecap="round" />
             <path d="M5 90 Q 20 88 35 90 T 65 90 T 95 90" opacity="0.5" stroke-linecap="round" />
-            <!-- Cloud/Mist -->
             <path d="M10 30 Q 25 25 40 30 T 70 30" opacity="0.3" stroke-dasharray="2,2" stroke-linecap="round" />
         </svg>
 
-        <!-- 🏺 手作藝廊 ➔ 畫架與陶藝幾何 -->
-        <div class="absolute left-6 bottom-2 opacity-25 pointer-events-none hidden md:block">
-            <svg style="width: 80px; height: 90px;" viewBox="0 0 120 120" fill="none" stroke="#ca674a" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg">
-                <!-- Easel / Frame -->
+        <div class="absolute left-3 bottom-1 opacity-20 md:opacity-25 pointer-events-none w-[55px] h-[65px] md:w-[80px] md:h-[90px]">
+            <svg viewBox="0 0 120 120" fill="none" stroke="#ca674a" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
                 <path d="M60 10 L60 110 M20 100 L60 10 L100 100 M15 90 L105 90" stroke-linecap="round" />
-                <!-- Palette on easel -->
                 <path d="M40 50 Q 30 65 50 75 T 80 65 T 70 45 Z" fill="#fbeee8" stroke-linecap="round" />
-                <!-- Paintbrush -->
                 <line x1="30" y1="80" x2="85" y2="35" stroke-linecap="round" />
                 <path d="M85 35 Q 90 30 87 27 Z" fill="#ca674a" />
             </svg>
         </div>
 
-        <!-- 🍃 蘭陽微風綠葉 1 -->
         <svg class="absolute pointer-events-none animate-leaf-1 text-emerald-600/30" style="top: -10px; left: 15%; width: 14px; height: 14px;" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17 2 C 12 2, 7 8, 7 14 C 7 18, 11 21, 15 21 C 20 21, 21 16, 21 10 C 21 5, 19 2, 17 2 Z"/>
         </svg>
-        <!-- 🍃 蘭陽微風綠葉 2 -->
         <svg class="absolute pointer-events-none animate-leaf-2 text-lime-600/30" style="top: -10px; left: 45%; width: 18px; height: 18px;" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17 2 C 12 2, 7 8, 7 14 C 7 18, 11 21, 15 21 C 20 21, 21 16, 21 10 C 21 5, 19 2, 17 2 Z"/>
         </svg>
-        <!-- 🍃 蘭陽微風綠葉 3 -->
         <svg class="absolute pointer-events-none animate-leaf-3 text-emerald-500/40" style="top: -10px; left: 75%; width: 12px; height: 12px;" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17 2 C 12 2, 7 8, 7 14 C 7 18, 11 21, 15 21 C 20 21, 21 16, 21 10 C 21 5, 19 2, 17 2 Z"/>
         </svg>
 
         <div class="absolute top-4 right-4 z-10 flex flex-col items-end gap-1.5">
-            <!-- ☁️ 雲端同步連線指示燈 (簡約五字版) -->
             <div id="cloud-sync-status" class="inline-flex items-center gap-1.5 bg-gray-500/10 text-gray-500 text-[10px] font-bold px-2.5 py-1 rounded-full border border-gray-200/50 backdrop-blur-sm">
                 <span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
                 <span id="cloud-status-text">本機儲存</span>
             </div>
             <button onclick="openHeaderModal()" class="bg-white/80 hover:bg-white text-coral-500 text-[10px] font-bold px-3 py-1.5 rounded-full border border-sand-200/80 shadow-sm transition-all backdrop-blur-sm font-sans">✏️ 編輯抬頭</button>
         </div>
-        <div class="max-w-2xl mx-auto">
-            <span id="display-top-tag" class="text-[10px] uppercase tracking-[0.4em] text-coral-500 font-bold block mb-2">Yilan Art &amp; Pottery Escape 🎨🏺</span>
-            <h1 id="display-title" class="font-serif text-3xl md:text-5xl font-semibold tracking-wide text-sand-800 mb-1">Yilan Art &amp; Pottery Trip</h1>
+        <div class="max-w-2xl mx-auto relative z-0">
+            <span id="display-top-tag" class="text-[10px] uppercase tracking-[0.4em] text-coral-500 font-bold block mb-2">Yilan Art & Pottery Escape 🎨🏺</span>
+            <h1 id="display-title" class="font-serif text-3xl md:text-5xl font-semibold tracking-wide text-sand-800 mb-1">Yilan Art & Pottery Trip</h1>
             <div class="magazine-line my-3 opacity-20"></div>
             <p id="display-desc" class="text-[10px] font-medium tracking-[0.25em] text-ocean-600 uppercase">2026 宜蘭藝術慢活 ✦ 捏陶、青花瓷畫與山海手作</p>
         </div>
     </header>
 
-    <!-- SPA NAVIGATION BAR -->
     <nav class="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-sand-200 py-1 shadow-sm">
         <div class="max-w-md mx-auto px-4 flex justify-around">
             <button onclick="switchTab('itinerary')" id="nav-itinerary" class="nav-btn py-2.5 px-3 text-xs font-semibold tracking-wider text-coral-500 border-b-2 border-coral-500 flex items-center gap-1.5 outline-none font-sans">Schedule</button>
@@ -137,9 +121,7 @@
         </div>
     </nav>
 
-    <!-- MAIN CONTAINER -->
     <main class="max-w-4xl w-full mx-auto px-3 py-6 flex-grow">
-        <!-- ================= PAGE 1: 行程頁面 ================= -->
         <section id="page-itinerary" class="page-section space-y-6">
             <div class="text-center max-w-md mx-auto">
                 <h2 id="title-itinerary" class="font-serif text-xl md:text-2xl font-semibold text-sand-800">Collecting Moments 🖼️</h2>
@@ -157,7 +139,6 @@
             <div class="max-w-xl mx-auto"><div class="relative pl-6 border-l border-coral-200 space-y-6" id="itinerary-timeline-container"></div></div>
         </section>
 
-        <!-- ================= PAGE 2: 記帳頁面 ================= -->
         <section id="page-splitter" class="page-section hidden space-y-6">
             <div class="text-center max-w-md mx-auto">
                 <h2 id="title-splitter" class="font-serif text-xl md:text-2xl font-semibold text-sand-800">Yilan Billing 💴</h2>
@@ -226,10 +207,9 @@
             </div>
         </section>
 
-        <!-- ================= PAGE 3: 備忘頁面 ================= -->
         <section id="page-checklist" class="page-section hidden space-y-6">
             <div class="text-center max-w-md mx-auto">
-                <h2 id="title-checklist" class="font-serif text-xl md:text-2xl font-semibold text-sand-800">Note &amp; Sketching 🎨🏺</h2>
+                <h2 id="title-checklist" class="font-serif text-xl md:text-2xl font-semibold text-sand-800">Note & Sketching 🎨🏺</h2>
                 <p id="sub-checklist" class="text-[10px] text-coral-500 font-bold mt-0.5 uppercase tracking-widest">CHECKLIST & PACKING LIST</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
@@ -259,7 +239,6 @@
         </section>
     </main>
 
-    <!-- Modals -->
     <div id="header-modal" class="fixed inset-0 z-50 flex items-end justify-center bg-sand-800/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="w-full max-w-md bg-white rounded-t-3xl p-6 space-y-4 shadow-2xl transform translate-y-full transition-transform duration-300">
             <div class="flex items-center justify-between border-b border-sand-100 pb-3">
@@ -322,16 +301,10 @@
         <span class="text-coral-400">✦</span><span id="toast-message">操作成功！</span>
     </div>
 
-    <!-- JAVASCRIPT LOCAL ENGINE -->
     <script>
-        // =========================================================================
-        // 🔗 💡 【重要步驟：請在此貼上您的 GAS Web App URL】
-        // =========================================================================
         const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwhBl7qS6vUSCnNmQVnjFCTOKBhYvSb7ja5dUnpbkBJ8k-PlXWASZS84HuyLaXD6p-f/exec"; 
-
         const LOCAL_STORAGE_KEY = 'wanderlust_yilan_standalone_v1';
 
-        // 預設核心資料（符合您的宜蘭藝術慢活主題特色 🎨🏺🪵⛰️）
         let appState = {
             lastUpdated: 0,
             activeDay: 1,
@@ -357,7 +330,7 @@
         };
 
         let db = null;
-        let useFirebase = false; // 這裡用作標記 GAS 成功與否
+        let useFirebase = false;
         let isSyncing = false;
 
         function renderHeaderTexts() {
@@ -393,7 +366,6 @@
             else { dBtn.classList.remove('hidden'); dBtn.innerText = `🗑️ 刪除 DAY ${String(appState.activeDay).padStart(2, '0')} 行程`; }
         }
 
-        // 💡 智慧時間轉換輔助函數：將 GAS 傳回的 Dec 30, 1899 ISO 時間格式轉換回 hh:mm AM/PM 格式
         function formatTime(timeStr) {
             if (!timeStr) return '';
             if (typeof timeStr === 'string' && timeStr.includes('1899-12-30')) {
@@ -451,7 +423,6 @@
             });
         }
 
-        // 頁面切換控制
         function switchTab(tabId) {
             document.querySelectorAll('.page-section').forEach(section => section.classList.add('hidden'));
             document.getElementById(`page-${tabId}`).classList.remove('hidden');
@@ -534,7 +505,6 @@
                 let debtor = dArray[i], creditor = cArray[j];
                 let settleAmount = Math.min(debtor.amount, creditor.amount);
                 
-                // 💡 關鍵修復：將原先未定義的變數 d 修正為正確的 debtor
                 if (settleAmount > 0.5) transactions.push({ from: debtor.name, to: creditor.name, amount: Math.round(settleAmount) });
                 debtor.amount -= settleAmount; creditor.amount -= settleAmount;
                 if (debtor.amount <= 0.5) i++; if (creditor.amount <= 0.5) j++;
@@ -594,7 +564,6 @@
             sanitizeAppState(); renderAll();
         }
 
-        // --- 核心同步引擎 (智慧型診斷版) ---
         async function saveState() {
             localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(appState));
             await syncWithGAS("post");
@@ -624,30 +593,22 @@
 
             try {
                 if (action === "get") {
-                    console.log("正在從 Google Sheets 撈取最新資料...");
                     const response = await fetch(GAS_WEB_APP_URL);
-                    
-                    // 💡 如果回傳的不是 200，立刻拋出錯誤顯示於網頁
                     if (!response.ok) {
                         throw new Error(`HTTP 錯誤! 狀態碼: ${response.status}`);
                     }
-                    
                     const result = await response.json();
                     
                     if (result.status === "success" && result.data) {
                         importCloudData(result.data);
-                        
                         useFirebase = true;
                         badge.className = "inline-flex items-center gap-1.5 bg-emerald-500/10 text-emerald-600 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/20 backdrop-blur-sm";
                         badge.querySelector('span').className = "w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse";
-                        
-                        // 💡 僅留下純淨的「雲端已同步」
                         txt.innerText = "雲端已同步";
                     } else {
                         throw new Error(result.message || "GAS 後台解譯失敗");
                     }
                 } else if (action === "post") {
-                    console.log("正在推送本地資料至 Google Sheets...");
                     const payload = {
                         action: "sync_all",
                         state: {
@@ -674,8 +635,6 @@
                         useFirebase = true;
                         badge.className = "inline-flex items-center gap-1.5 bg-emerald-500/10 text-emerald-600 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/20 backdrop-blur-sm";
                         badge.querySelector('span').className = "w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse";
-                        
-                        // 💡 僅留下純淨的「雲端已同步」
                         txt.innerText = "雲端已同步";
                     } else {
                         throw new Error(result.message || "雲端覆寫失敗");
@@ -684,8 +643,6 @@
             } catch (error) {
                 console.error("GAS 同步連線異常:", error);
                 useFirebase = false;
-                
-                // 💡 終極優化：將精準報錯內容（如 TypeError / Cors / JSON 錯誤）直接噴在 UI 上！
                 let errorMsg = error.message || error;
                 if (errorMsg.includes("Failed to fetch")) {
                     errorMsg = "連線被拒 (請檢查網址、CORS 權限)";
@@ -696,7 +653,6 @@
                 badge.className = "inline-flex items-center gap-1.5 bg-rose-500/10 text-rose-600 text-[10px] font-bold px-2.5 py-1 rounded-full border border-rose-500/20 backdrop-blur-sm";
                 badge.querySelector('span').className = "w-1.5 h-1.5 rounded-full bg-rose-500";
                 txt.innerText = `⚠️ 同步異常: ${errorMsg}`;
-                
                 loadLocalBackup();
             } finally {
                 isSyncing = false;
@@ -706,7 +662,6 @@
         function importCloudData(cloudData) {
             if (!cloudData) return;
             
-            // 💡 智慧防洗掉與覆蓋保護邏輯：讀取雲端記錄的最大天數設定與時間戳記
             let totalDays = 1;
             let cloudTime = 0;
             if (cloudData.config && cloudData.config.length > 0) {
@@ -725,7 +680,6 @@
                     totalDays = Number(totalDaysObj.Value) || 1;
                 }
                 
-                // 💡 抓取雲端最大更新時間
                 cloudData.config.forEach(c => {
                     const lu = Number(c.LastUpdated) || 0;
                     if (lu > cloudTime) cloudTime = lu;
@@ -733,26 +687,20 @@
             }
             
             const localTime = appState.lastUpdated || 0;
-            
-            // 💡 本機資料豐富度檢測，避免全新或清空的雲端工作表覆蓋了本機剛打好的精美資料！
             const isLocalRicher = (appState.expenses && appState.expenses.length > 0) || 
                                  (Object.keys(appState.itinerary).length > 1) || 
                                  (appState.itinerary[1] && appState.itinerary[1].length > 1) ||
                                  (appState.members && appState.members.length > 3);
 
             if (cloudTime > localTime) {
-                console.log("雲端資料較新，自雲端覆蓋更新本地端...");
                 if (cloudData.members && cloudData.members.length > 0) {
                     appState.members = cloudData.members.map(m => m.Name);
                 }
                 if (cloudData.itinerary) {
                     const newItinerary = {};
-                    
-                    // 💡 先使用 totalDays 將所有天數初始化為空陣列，防堵空天數切換消失 Bug
                     for (let d = 1; d <= totalDays; d++) {
                         newItinerary[d] = [];
                     }
-                    
                     cloudData.itinerary.forEach(item => {
                         const dayNum = Number(item.Day);
                         if (!newItinerary[dayNum]) newItinerary[dayNum] = [];
@@ -796,16 +744,13 @@
                 localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(appState));
                 renderAll();
             } else if (cloudTime < localTime || (cloudTime === 0 && isLocalRicher)) {
-                console.log("本地資料較新或雲端為空，將本機豐富進度推送同步至 Google Sheet...");
-                saveState(); // 資料傳送中
+                saveState();
                 renderAll();
             } else {
-                // 時間一致，安全渲染
                 renderAll();
             }
         }
 
-        // --- 前端按鈕操作邏輯函數 ---
         function switchDay(d) { appState.activeDay = d; renderDayTabs(); renderDynamicItinerary(); }
         function addNewDay() {
             const days = Object.keys(appState.itinerary).map(Number);
@@ -982,7 +927,6 @@
             if (item) { item.text = newText; updateAndSave(); renderTodo(type); closeTodoEditModal(); }
         }
 
-        // 拖曳排序
         let draggedId = null;
         function handleDragStart(e) { draggedId = parseInt(e.currentTarget.getAttribute('data-id')); e.currentTarget.classList.add('opacity-40'); }
         function handleDragOver(e) { if (e.preventDefault) e.preventDefault(); return false; }
@@ -1007,8 +951,6 @@
 
         window.onload = function() {
             loadLocalBackup();
-            
-            // 每 15 秒自動在背景向 GAS 抓取最新進度，維持跨裝置同步
             if (GAS_WEB_APP_URL && GAS_WEB_APP_URL !== "YOUR_GAS_WEB_APP_URL_HERE") {
                 syncWithGAS("get");
                 setInterval(() => {
